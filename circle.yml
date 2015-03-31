@@ -1,0 +1,7 @@
+deployment:
+  production:
+    branch: etsy
+    commands: 
+      - fakeroot debian/rules binary
+      - cp ../statsd*.deb $CIRCLE_ARTIFACTS/statsd-chaordic-latest.deb
+
